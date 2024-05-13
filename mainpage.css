@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #b5b5b5;
+  /* height: 107px; */
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  padding: 20px 0 0 15px;
+}
+
+header .header_menu {
+  display: flex;
+  padding: 27px 27px 0 0;
+}
+header .header_menu li {
+  margin-right: 18px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+/* ======================header============================= */
+.main {
+  background-image: url(./main-img/main-background.png) no-repeat 50% / cover;
+
+}
+.main .main-model {
+  display: block;
+  text-align: center;
+}
