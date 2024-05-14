@@ -27,3 +27,78 @@ gsap.to(".main-model", {
 });
  */
 // ================================================gallery======================================
+
+ gsap.to(".container1", {
+  scrollTrigger: {
+    trigger: ".container1",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: 500,
+  duration: 3,
+});
+
+gsap.to(".text.text1", {
+  scrollTrigger: {
+    trigger: ".container1",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: -100,
+  duration: 3,
+});
+
+gsap.to(".container2", {
+  scrollTrigger: {
+    trigger: ".container2",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: 100,
+  duration: 3,
+});
+
+gsap.to(".text2", {
+  scrollTrigger: {
+    trigger: ".container2",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: -500,
+  duration: 3,
+});
+
+gsap.to(".container3", {
+  scrollTrigger: {
+    trigger: ".container3",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: 100,
+  duration: 3,
+});
+
+gsap.to(".text3", {
+  scrollTrigger: {
+    trigger: ".container3",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: -300,
+  duration: 3,
+});
+
+// ================================================best-collection======================================
+
