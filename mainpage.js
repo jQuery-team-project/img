@@ -102,3 +102,28 @@ gsap.to(".text3", {
 
 // ================================================best-collection======================================
 
+const total = document.querySelector(".horizontal_scroll");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+  let totalWidth = total.scrollWidth;
+  return -(totalWidth - window.innerWidth);
+}
+
+const tween = gsap.to(total, {
+  x: getScrollAmount,
+  duration: 3,
+  ease: "none",
+});
+
+
+ScrollTrigger.create({
+  trigger: ".hswrapper",
+  start: "top top",
+  end: () => `+=${getScrollAmount() * -1}`,
+  pin: true,
+  animation: tween,
+  scrub: 1,
+  invalidateOnRefresh: true,//사이즈 조절시 새로고침
+  markers: true
+});
