@@ -391,8 +391,116 @@ header .header_menu li {
   text-align: left;
 }
 .product_slide .section_top {
-  justify-content: space-between;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 160px;
 }
 .product_slide .section_top .sun {
+  position: absolute;
+  top: 0; right: 0;
+  margin: 5%;
   width: 20%;
+}
+.slider-wrap {
+  display: flex;
+  width: auto;
+  overflow-x: hidden;
+  margin-bottom: 310px;
+}
+
+.slider-loop {
+  list-style: none;
+  animation: infinity-loop 18s infinite linear 1s both;
+  display: flex;
+  height: 600px;
+  position: relative;   
+}
+.slider-loop li img {
+  height: 600px;
+}
+
+@keyframes infinity-loop {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }    
+}
+/* slider1 */
+.slider-wrap-inverse {
+  display: flex;
+  width: auto;
+  overflow-x: hidden;
+  padding-bottom: 310px;
+}
+
+.slider-loop-inverse {
+  list-style: none;
+  animation: infinity-loopinverse 18s infinite linear 1s both;
+  display: flex;
+  height: 600px;
+  position: relative;   
+}
+.slider-loop-inverse li img {
+  height: 600px;
+}
+@keyframes infinity-loopinverse {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }    
+}
+/* ======================slider============================= */
+.instagram {
+  font-family: "Abhaya Libre", serif;
+  background-color: #b5b5b5;
+  text-align: left;
+  font-size: 36px;
+  color: #374B3F;
+  text-transform: uppercase;
+  padding-top: 110px;
+}
+.instagram p:first-child {
+  padding-bottom: 80px;
+}
+.instagram .account {
+  font-size: 80px;
+  color: #243029;
+  text-decoration: underline 4px;
+}
+.instagram .photography {
+  padding-top: 116px;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 147px;
+}
+.instagram .photography img {
+  gap: 160px;
+
+}
+/* ======================instagram============================= */
+section.forest {
+  position: relative;
+  background-color: #374B3F;
+  height: 697px;
+}
+.forest img {
+  position: absolute;
+}
+.curtain{top: 0; left: 0;}
+.bride{bottom: 0; left: 280px;}
+.logo_text{top: 141px;}
+.sunflower{top: 0; right: 0;}
+.ballerina{bottom: 0; right: 467px;}
+.rabbit{bottom: -70px; right: 0;}
+/* ======================forest============================= */
+footer {
+  padding-top: 137px;
+  background-color: #b5b5b5;
 }
