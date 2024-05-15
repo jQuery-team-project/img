@@ -103,7 +103,7 @@ gsap.to(".text3", {
 // ================================================best-collection======================================
 
 const total = document.querySelector(".horizontal_scroll");
-console.log(races.offsetWidth)
+console.log(total.offsetWidth)
 
 function getScrollAmount() {
   let totalWidth = total.scrollWidth;
@@ -118,7 +118,7 @@ const tween = gsap.to(total, {
 
 
 ScrollTrigger.create({
-  trigger: ".hswrapper",
+  trigger: ".hsWrapper",
   start: "top top",
   end: () => `+=${getScrollAmount() * -1}`,
   pin: true,

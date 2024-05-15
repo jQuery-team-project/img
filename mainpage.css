@@ -181,6 +181,7 @@ header .header_menu li {
   font-family: "Abhaya Libre", serif;
   margin: 0;
   overflow-x: hidden;
+ 
 }
 .horizontal_scroll {
   width: fit-content;
@@ -300,3 +301,98 @@ header .header_menu li {
   padding: 10%;
 }
 /* ======================horizontal============================= */
+
+.art_book {
+  font-family: "Abhaya Libre", serif;
+  background-color: #ddd;
+  overflow: hidden;
+  padding-bottom: 90px;
+}
+.flex_wrapper {
+  display: flex;
+}
+.art_book h2 {
+  font-size: 250px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 250px;
+  vertical-align: baseline;
+  transform: translateX(-2%);
+  text-wrap: nowrap;
+}
+.art_book .gallery_group1 {
+  position: relative;
+  padding-bottom: 95px;
+}
+.art_book .gallery_group1 .text {
+  position: absolute;
+}
+.art_book .gallery_group1 .text1 {top: -3%;}
+.art_book .gallery_group1 .text2 {top: 39%;}
+/* group1 */
+.art_book .gallery_group2 {
+  position: relative;
+}
+.art_book .gallery_group2 .text {
+  position: absolute;
+}
+.art_book .gallery_group2 .text1 {top: 93.5%; left: 5%;}
+.art_book .gallery_group2 .text2 {top: 44%;}
+/* group2 */
+.art_book .gallery_group3 {
+  padding-top: 125px;
+  position: relative;
+}
+.art_book .gallery_group3 .text {
+  position: absolute;
+}
+.art_book .gallery_group3 .text1 {top: 94%; left: 41.8%;}
+.art_book .gallery_group3 .text2 {top: 43.7%;}
+/* ======================art-book============================= */
+.division {
+  font-family: "Abhaya Libre", serif;
+  background-color: #ddd;
+  color: #fff;
+  padding-bottom: 185px;
+}
+.division .sentence {
+  font-size: 153px;
+}
+.division > .flex_wrapper:first-of-type {
+  align-items: baseline;
+  justify-content: space-between;
+}
+.division > .flex_wrapper:last-of-type {
+  border-top: 1px #243029 solid;
+  border-bottom: 1px #243029 solid;
+  padding: 56px 0 84px 0;
+}
+.division .more {
+  font-size: 90px;
+}
+.division .flex_wrapper .cloud {
+  width: 29.2%;
+}
+.division .flex_wrapper .butterfly {
+  width: 9.3%;
+  transform: rotate(-15deg);
+}
+.division .flex_wrapper .arrow {
+  width: 6.6%;
+  margin: 0 66px 0 24px;
+}
+/* ======================division============================= */
+.product_slide {
+  font-family: "Abhaya Libre", serif;
+  background-color: #243029;
+  color: #fff;
+  font-size: 153px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.product_slide .section_top {
+  justify-content: space-between;
+}
+.product_slide .section_top .sun {
+  width: 20%;
+}
