@@ -4,6 +4,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   text-align: center;
+  overflow-x: hidden;
 }
 header {
   background-color: #b5b5b5;
@@ -63,12 +64,14 @@ header .header_menu li {
 .main .main_img_wrapper img {
   position: absolute;
   top: 0%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
   transform: scale(2);
   transition: transform 1000ms ease-out;
   margin: auto;
+  object-fit: cover;
+  object-position: top;
 }
 .mov_text {
   font-size: 87px;
@@ -91,7 +94,6 @@ header .header_menu li {
 }
 .gallery > img{ 
   width: 37.2%;
-  height: 80vh;
 }
 .gallery .img_group {
   width: 30%;
@@ -104,9 +106,6 @@ header .header_menu li {
 .gallery .img_group img:first-child {
   margin-bottom: 50px;
 }
-/* .gallery .img_group.on {
-  opacity: 1;
-} */
 /* ======================gallery============================= */
 .best_collection {
   font-family: "Abhaya Libre", serif;
@@ -234,7 +233,7 @@ header .header_menu li {
 }
 .hs_part1 .part1_bottom img {
   width: 38.5%;
-  height: 51%;
+  /* height: 51%; */
   margin-right: 6%;
 }
 .hs_part1 .part1_bottom .text-wrapper {
@@ -243,15 +242,15 @@ header .header_menu li {
   margin-right: 80px;
 }
 .hs_part1 .part1_bottom .text-wrapper p:first-child {
-  font-size: 65px;
+  font-size: 3vw;
   text-transform: uppercase;
   margin-bottom: 10%;
 }
 .hs_part1 .part1_bottom .text-wrapper p:nth-child(2) {
-  font-size: 70px;
+  font-size: 4vw;
 }
 .hs_part1 .part1_bottom .text-wrapper p:last-child {
-  font-size: 60px;
+  font-size: 3vw;
 }
 /* part1 */
 .hs_part2 {
@@ -261,6 +260,7 @@ header .header_menu li {
   position: relative;
   color: #fff;
   text-transform: uppercase;
+  z-index: -99;
 }
 .hs_part2 > p {
   font-size: 100px;
@@ -272,6 +272,7 @@ header .header_menu li {
 }
 .hs_part2 > img:first-of-type {
   left: 10%; top: 20%;
+  z-index: -9;
 }
 .hs_part2 > img:last-of-type {
   bottom: 0;
@@ -279,10 +280,10 @@ header .header_menu li {
 }
 .hs_part2 .part2_bottom {
   display: flex;
-  margin-top: 360px;
+  margin-top: 650px;
 }
 .hs_part2 .part2_bottom .text-wrapper {
-  font-size: 65px;
+  font-size: 3vw;
   text-align: left;
   margin: 2%;
 }
@@ -294,22 +295,29 @@ header .header_menu li {
   position: relative;
   color: #fff;
   text-transform: uppercase;
+  z-index: -99;
 }
 .hs_part3 > p {
   font-size: 130px;
   text-align: left;
   margin-top: 65px;
+  z-index: 9999;
 }
 .hs_part3 > img {
   position: absolute;
+  width: 23.75%;
   right: 0; top: 15%;
+  z-index: -9;
 }
 .hs_part3 .part3_bottom {
   display: flex;
-  margin-top: 350px;
+  margin-top: 630px;
+}
+.hs_part3 .part3_bottom img {
+  width: 39.4%;
 }
 .hs_part3 .part3_bottom .text-wrapper {
-  font-size: 65px;
+  font-size: 3vw;
   text-align: left;
   padding: 10%;
 }
@@ -333,15 +341,29 @@ header .header_menu li {
   transform: translateX(-2%);
   text-wrap: nowrap;
 }
+.art_book .text1 {
+  width: 29.11%;
+}
+.art_book .text2 {
+  width: 30.68%;
+}
+.art_book .first {
+  width: 100%;
+}
+.art_book .second img {
+  width: 50%;
+}
 .art_book .gallery_group1 {
   position: relative;
   padding-bottom: 95px;
+  width: 100%;
 }
 .art_book .gallery_group1 .text {
   position: absolute;
 }
 .art_book .gallery_group1 .text1 {top: -3%;}
-.art_book .gallery_group1 .text2 {top: 39%;}
+.art_book .gallery_group1 .text2 {
+}
 /* group1 */
 .art_book .gallery_group2 {
   position: relative;
@@ -425,11 +447,11 @@ header .header_menu li {
   list-style: none;
   animation: infinity-loop 18s infinite linear 1s both;
   display: flex;
-  height: 600px;
+  height: 650px;
   position: relative;   
 }
 .slider-loop li img {
-  height: 600px;
+  height: 650px;
 }
 
 @keyframes infinity-loop {
@@ -453,11 +475,11 @@ header .header_menu li {
   list-style: none;
   animation: infinity-loopinverse 18s infinite linear 1s both;
   display: flex;
-  height: 600px;
+  height: 650px;
   position: relative;   
 }
 .slider-loop-inverse li img {
-  height: 600px;
+  height: 650px;
 }
 @keyframes infinity-loopinverse {
   from {
@@ -488,30 +510,32 @@ header .header_menu li {
 }
 .instagram .photography {
   padding-top: 116px;
-  width: 90%;
+  width: 95%;
   justify-content: space-between;
+  gap: 3%;
   margin: auto;
   padding-bottom: 147px;
 }
 .instagram .photography img {
-  gap: 160px;
-
+  width: 33.3%;
 }
 /* ======================instagram============================= */
-section.forest {
+.forest {
   position: relative;
   background-color: #374B3F;
-  height: 697px;
+  width: 100%;
 }
 .forest img {
-  position: absolute;
+  width: 100%;
 }
-.curtain{top: 0; left: 0;}
-.bride{bottom: 0; left: 280px;}
-.logo_text{top: 141px;}
+/* 
+.background{width: 100%;}
+.curtain{width: 49.6%;}
+.bride{width: 22.7%;}
+.logo_text{top: 0;}
 .sunflower{top: 0; right: 0;}
 .ballerina{bottom: 0; right: 467px;}
-.rabbit{bottom: -70px; right: 0;}
+.rabbit{bottom: -70px; right: 0;} */
 /* ======================forest============================= */
 footer {
   padding-top: 137px;
