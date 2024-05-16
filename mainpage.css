@@ -503,4 +503,31 @@ section.forest {
 footer {
   padding-top: 137px;
   background-color: #b5b5b5;
+  position: relative;
+}
+footer address {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  width: 100%;
+  padding-top: 530px;
+}
+footer address div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+footer address p:not(:last-of-type)::after {
+  content: "|";
+  margin: 10px;
+}
+footer .gnb_bottom {
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 60px;
+  text-align: left;
+}
+footer .gnb_bottom li {
+  margin-bottom: 15px;
 }
