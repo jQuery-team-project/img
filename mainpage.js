@@ -119,7 +119,7 @@ const tween = gsap.to(total, {
 
 ScrollTrigger.create({
   trigger: ".hsWrapper",
-  start: "top top",
+  start: "43% top",
   end: () => `+=${getScrollAmount() * -1}`,
   pin: true,
   animation: tween,
