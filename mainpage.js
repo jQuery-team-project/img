@@ -7,7 +7,7 @@ gsap.to(".main-model", {
     start: "top 80vh",
     end: "1800px 50%",
     scrub: true,
-    markers: true,
+    markers: false,
     pin: true,
   },
   duration: 5,
@@ -36,7 +36,7 @@ gsap.to(".main-model", {
     scrub: true,
     markers: true,
   },
-  x: 500,
+  x: 300,
   duration: 3,
 });
 
@@ -72,7 +72,7 @@ gsap.to(".text2", {
     scrub: true,
     markers: true,
   },
-  x: -500,
+  x: -200,
   duration: 3,
 });
 
@@ -96,7 +96,7 @@ gsap.to(".text3", {
     scrub: true,
     markers: true,
   },
-  x: -300,
+  x: -100,
   duration: 3,
 });
 
@@ -125,7 +125,7 @@ ScrollTrigger.create({
   animation: tween,
   scrub: 1,
   invalidateOnRefresh: true,//사이즈 조절시 새로고침
-  markers: true
+  markers: false
 });
 
 

@@ -1,0 +1,198 @@
+@charset 'utf-8';
+
+@media (width <=768px) {
+  header {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  header .header-top {
+    font-family: "Pretendard", sans-serif;
+    display: block;
+    height: 30px;
+    background-color: #fff;
+    width: 100%;
+    line-height: 30px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  header .header_menu {
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  header .header_menu li {
+    margin-right: 0;
+    margin-left: 18px;
+  }
+
+  header .header_menu .pc_menu {
+    display: none;
+  }
+
+  header .header_menu .mobile_menu {
+    display: block;
+  }
+
+  header .header_menu .magnifier {
+    transform: translateY(3px);
+  }
+
+  header .header_menu .user {
+    transform: translateY(3px);
+  }
+
+  header .header_menu .hamburger-menu {
+    transform: translateY(3px);
+  }
+  /* ======================header============================= */
+  .main {
+    padding-top: 100px;
+  }
+  .main .main_img_wrapper {
+    width: 68%; height: 60vh;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .mov_text {
+    font-size: 25px;
+  }
+  .mov_text.text1 { top: 768px; left: 0;}
+  .mov_text.text2 { top: 1100px; left: 45%;}
+  .mov_text.text3 { top: 1400px; right: 14%;}
+  /* ======================main============================= */
+  .best_collection .title {
+    width: 53%;
+    margin-left: 16.4%;
+    padding-top: 78px;
+  }
+  .best_collection .best_collection_top .title h2 {
+    font-size: 20px;
+    width: 100%;
+    color: #374B3F;
+  }
+  .best_collection .title img {
+    width: 100%;
+  }
+  .best_collection .img_container p, .best_collection .text {
+    font-size: 30px;
+  }
+  .best_collection .img_container img {
+    width: 71px; height: 23px;
+  }
+   /* ======================best-collection============================= */
+  .introduction {
+    padding-top: 0;
+  }
+  .introduction .intro_text_wrapper h2 { font-size: 20px; text-align: left; margin-bottom: 20px;}
+  .introduction .intro_text_wrapper p { font-size: 18px; text-align: left; width: 90%; margin: auto; padding-bottom: 75px;}
+  .introduction .intro_text_wrapper {
+    margin-top: 15px;
+    display: block;
+  }
+  .introduction .phrase {
+    display: none;
+  }
+   /* ======================introduction============================ */
+   .art_book {
+    color: #fff;
+    padding-bottom: 0;
+   }
+   .art_book h2 img {
+    padding: 60px 0 35px 0;
+   }
+   .art_book .pc_menu {
+    display: none;
+   }
+   .art_book .gallery_group_mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+   .art_book .gallery_group_mobile div:not(:last-of-type) {
+    margin-bottom: 55px;
+   }
+   .art_book .gallery_group_mobile img {
+    width: 100%;
+   }
+   .art_book .gallery_group_mobile .gallery_section_1, .art_book .gallery_group_mobile .gallery_section_2, .art_book .gallery_group_mobile .gallery_section_3 {
+    position: relative;
+   }
+   .art_book .gallery_group_mobile .gallery_section_1 .advertisement {
+    position: absolute;
+    flex-wrap: wrap;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 51%;
+    justify-content: space-between;
+   }
+   .art_book .gallery_group_mobile .gallery_section_1 .advertisement p:first-child {
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+   }
+   .art_book .gallery_group_mobile .gallery_section_1 .advertisement p a {
+    font-family: "Pretendard", sans-serif;
+    font-size: 11px;
+    text-decoration: underline 1px;
+   }
+
+
+   .art_book .gallery_group_mobile .gallery_section_2 .advertisement {
+    position: absolute;
+    flex-wrap: wrap;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 51%;
+    justify-content: space-between;
+   }
+   .art_book .gallery_group_mobile .gallery_section_2 .advertisement p:first-child {
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+   }
+   .art_book .gallery_group_mobile .gallery_section_2 .advertisement p a {
+    font-family: "Pretendard", sans-serif;
+    font-size: 11px;
+    text-decoration: underline 1px;
+   }
+
+   .art_book .gallery_group_mobile .gallery_section_3 .advertisement {
+    position: absolute;
+    flex-wrap: wrap;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    justify-content: space-between;
+   }
+   .art_book .gallery_group_mobile .gallery_section_3 .advertisement p:first-child {
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+   }
+   .art_book .gallery_group_mobile .gallery_section_3 .advertisement p a {
+    font-family: "Pretendard", sans-serif;
+    font-size: 11px;
+    text-decoration: underline 1px;
+   }
+   /* ======================artbook============================ */
+   .division .sentence {
+    font-size: 42px;
+    font-weight: bold;
+   }
+   .division .more {
+    font-size: 20px;
+  }
+  .division > .flex_wrapper:last-of-type {
+    border-top: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    padding: 6px 0;
+  }
+}
