@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <!-- reset -->
   <link rel="stylesheet" href="./assets/style/minireset.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- style -->
   <link rel="stylesheet" href="./mainpage.css">
   <!-- style -->
@@ -17,6 +19,8 @@
   <script src="../assets/jquery-3.7.1.min.js"></script>
   <!-- gsap plugin -->
   <script src="./gsap.min.js"></script>
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script defer src="./mainpage.js"></script>
 </head>
@@ -243,12 +247,15 @@
   <!-- ===========================art-book=============================== -->
   <div class="division">
     <div class="flex_wrapper">
-      <img src="./main-img/구름.png" alt="구름사진" class="cloud">
+      <div class="img_wrapper">
+        <img src="./main-img/구름.png" alt="구름사진" class="cloud">
+      </div>
       <p class="sentence">Feel our freedom</p>
       <img src="./main-img/나비.png" alt="나비사진" class="butterfly">
     </div>
     <div class="flex_wrapper">
       <img src="./main-img/화살표.png" alt="화살표" class="arrow">
+      <img src="./main-img/arrow_mobile.png" alt="화살표" class="arrow_mobile">
       <p class="more">more</p>
     </div>
   </div>
@@ -257,6 +264,16 @@
     <div class="section_top">
       <h2>however<br>you<br>wear it, we<br>have it.</h2>
       <img src="./main-img/해.png" alt="해" class="sun">
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./main-img/모바일슬라이드1.png" alt="옷사진"></div>
+        <div class="swiper-slide"><img src="./main-img/모바일슬라이드2.png" alt="옷사진"></div>
+        <div class="swiper-slide"><img src="./main-img/모바일슬라이드3.png" alt="옷사진"></div>
+        <div class="swiper-slide"><img src="./main-img/모바일슬라이드4.png" alt="옷사진"></div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <div class="slider-wrap">
@@ -293,7 +310,7 @@
   <!-- ===========================slider=============================== -->
   <section class="instagram">
     <p>call or whatsapp</p>
-    <p class="account">follow @viviennewestwoodkorea</p>
+    <p class="account"><span>follow</span> @viviennewestwoodkorea</p>
     <p class="account">on instagram</p>
     <div class="photography flex_wrapper">
       <img src="./main-img/insta1.png" alt="모델">

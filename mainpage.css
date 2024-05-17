@@ -416,8 +416,14 @@ header .header_menu li {
 .division .more {
   font-size: 90px;
 }
-.division .flex_wrapper .cloud {
+.division .flex_wrapper .arrow_mobile {
+  display: none;
+}
+.division .flex_wrapper .img_wrapper {
   width: 29.2%;
+}
+.division .flex_wrapper .img_wrapper .cloud {
+  width: 100%;
 }
 .division .flex_wrapper .butterfly {
   width: 9.3%;
@@ -453,11 +459,11 @@ header .header_menu li {
   overflow-x: hidden;
   margin-bottom: 310px;
 }
-
 .slider-loop {
   list-style: none;
   animation: infinity-loop 18s infinite linear 1s both;
   display: flex;
+  width: 100%;
   height: 650px;
   position: relative;   
 }
@@ -529,6 +535,9 @@ header .header_menu li {
 }
 .instagram .photography img {
   width: 33.3%;
+}
+.swiper {
+  display: none;
 }
 /* ======================instagram============================= */
 .forest {
