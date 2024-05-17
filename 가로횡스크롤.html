@@ -3,29 +3,92 @@
 
 <head>
   <meta charset="utf-8">
-  <title>팀프로젝트</title>
+  <title>가로</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="../assets/style/minireset.min.css">
-  <link rel="stylesheet" href="../assets/style/fonts.css">
+  <link rel="stylesheet" href="./assets/style/minireset.min.css">
+  <link rel="stylesheet" href="./assets/styles/font.css">
   <style>
+    .horizontal_top {
+      font-family: "Abhaya Libre", serif;
+      background-color: #243029;
+      font-size: 153px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      padding: 153px 0 280px 0;
+    }
+
     .hsWrapper {
       font-family: "Abhaya Libre", serif;
       margin: 0;
       overflow-x: hidden;
       color: #fff;
-    }
-    .horizontal_top {
       background-color: #243029;
-      font-size: 153px;  
-      font-weight: 800;
       text-transform: uppercase;
-      color: #fff;
-      display: flex;
+      font-size: 30px;
     }
+
+    .hsWrapper .horizontal_scroll {
+      width: fit-content;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
     .horizontal_top img {
       width: 30%;
       height: 51%;
     }
+
+    .hs_part1,
+    .hs_part2,
+    .hs_part3 {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      padding-top: 100px;
+    }
+
+    .hs_part1 {
+      gap: 10%;
+    }
+
+    .hs_part2 {
+      gap: 2%;
+    }
+
+    .hs_part3 {
+      gap: 10%;
+    }
+
+    .hs_part1 img,
+    .hs_part2>img {
+      width: 34%;
+      object-fit: cover;
+    }
+
+    .hsWrapper .horizontal_scroll .hs_part1 .text-wrapper p.phrase {
+      margin-bottom: 100px;
+    }
+
+    .hsWrapper .horizontal_scroll .hs_part2 .text-wrapper {
+      position: relative;
+    }
+
+    .hsWrapper .horizontal_scroll .hs_part2 .text-wrapper img {
+      width: 30%;
+      position: absolute;
+      bottom: 0;
+      right: 15%;
+    }
+
+    .hsWrapper .horizontal_scroll .hs_part3 .text-wrapper p {
+      width: 80%;
+    }
+   
+    /*  .hsWrapper .horizontal_scroll .hs_part2 .text-wrapper p:last-of-type {
+      margin-bottom: 50%;
+    } */
   </style>
   <script src="./gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -43,58 +106,46 @@
     <div class="horizontal_scroll">
 
       <div class="hs_part1">
-
-
-        <div class="part1_bottom">
-          <img src="./main-img/가로1-2.png" alt="시니어모델사진">
-          <div class="text-wrapper">
-            <p>I just wanted to know why I had to do it in one way only, and not in another way.</p>
-            <p>-Vivienne Isabel Westwood-</p>
-            <p>1941~2022</p>
-          </div>
+        <img src="./main-img/가로하자.png" alt="시니어모델사진">
+        <div class="text-wrapper">
+          <p class="phrase">I just wanted to know why I had to do it in one way only, and not in another way.</p>
+          <p>-Vivienne Isabel Westwood-</p>
+          <p>1941~2022</p>
         </div>
       </div>
 
-      <!-- <div class="hs_part2">
-        <p>I started a conservation campaign because I was afraid that the earth would be destroyed.</p>
-        <img src="./main-img/가로2-1.png" alt="거북이사진">
-        <img src="./main-img/가로2-2.png" alt="곰사진">
-        <div class="part2_bottom">
-          <img src="./main-img/가로2-3.png" alt="사람사진">
-          <div class="text-wrapper">
-            <p>I believe that one small thing changes the world.</p>
-            <p>The same goes for the conservation movement.</p>
-          </div>
+      <div class="hs_part2">
+        <img src="./main-img/가로하자2.png" alt="사람사진">
+        <div class="text-wrapper">
+          <p>I believe that one small thing changes the world.</p>
+          <p>The same goes for the conservation movement.</p>
+          <img src="./main-img/가로2-2.png" alt="곰사진">
         </div>
       </div>
 
       <div class="hs_part3">
-        <p>Fashion is more than just wearing clothes.</p>
-        <img src="./main-img/가로3-1.png" alt="행성사진">
-        <div class="part3_bottom">
-          <img src="./main-img/가로3.png" alt="여자모델">
-          <div class="text-wrapper">
-            <p>It's how we communicate with the world.</p>
-            <p>It's our voice.</p>
-          </div>
+        <img src="./main-img/가로3.png" alt="여자모델">
+        <div class="text-wrapper">
+          <p>It's how we communicate with the world.</p>
+          <p>It's our voice.</p>
         </div>
-      </div> -->
+      </div>
 
     </div>
   </div>
 
-  <!--  <script>
-    gsap.registerPlugin(ScrollTrigger)
+  <div class="empty"></div>
 
-    const races = document.querySelector(".races");
-    console.log(races.offsetWidth)
+  <script>
+    const total = document.querySelector(".horizontal_scroll");
+    console.log(total.offsetWidth)
 
     function getScrollAmount() {
-      let racesWidth = races.scrollWidth;
-      return -(racesWidth - window.innerWidth);
+      let totalWidth = total.scrollWidth;
+      return -(totalWidth - window.innerWidth);
     }
 
-    const tween = gsap.to(races, {
+    const tween = gsap.to(total, {
       x: getScrollAmount,
       duration: 3,
       ease: "none",
@@ -102,17 +153,27 @@
 
 
     ScrollTrigger.create({
-      trigger: ".racesWrapper",
-      start: "200px top",
+      trigger: ".hsWrapper",
+      start: "top top",
       end: () => `+=${getScrollAmount() * -1}`,
       pin: true,
       animation: tween,
       scrub: 1,
       invalidateOnRefresh: true,//사이즈 조절시 새로고침
-      markers: true
-    })
+      markers: false
+    });
 
-  </script> -->
+  </script>
+
+
+
 </body>
 
 </html>
+
+
+
+
+
+
+<!--   -->
