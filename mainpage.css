@@ -342,6 +342,7 @@ header .header_menu li {
   color: #fff;
   display: flex;
   padding: 153px 0 280px 0;
+  text-align: left;
 }
 
 .hsWrapper {
@@ -428,10 +429,10 @@ header .header_menu li {
   width: 100%;
   padding: 240px 0 190px 0;
 }
-.art_book .text1 {
+.art_book .text11 {
   width: 29.11%;
 }
-.art_book .text2 {
+.art_book .text22 {
   width: 30.68%;
 }
 .art_book .first {
@@ -448,7 +449,11 @@ header .header_menu li {
 .art_book .gallery_group1 .text {
   position: absolute;
 }
-.art_book .gallery_group1 .text1 {top: -3%;}
+.art_book .gallery_group1 .text11 {top: -3%; right: 5%;}
+.art_book .gallery_group1 .text22 {
+  top: 41%; left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* group1 */
 .art_book .gallery_group2 {
   position: relative;
@@ -456,8 +461,11 @@ header .header_menu li {
 .art_book .gallery_group2 .text {
   position: absolute;
 }
-.art_book .gallery_group2 .text1 {top: 93.5%; left: 5%;}
-.art_book .gallery_group2 .text2 {top: 44%;}
+.art_book .gallery_group2 .text11 {top: 93.5%; left: 5%;}
+.art_book .gallery_group2 .text22 {
+  top: 48%; left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* group2 */
 .art_book .gallery_group3 {
   padding-top: 125px;
@@ -466,8 +474,11 @@ header .header_menu li {
 .art_book .gallery_group3 .text {
   position: absolute;
 }
-.art_book .gallery_group3 .text1 {top: 94%; left: 41.8%;}
-.art_book .gallery_group3 .text2 {top: 43.7%;}
+.art_book .gallery_group3 .text11 {top: 94%; left: 41.8%;}
+.art_book .gallery_group3 .text22 {
+  top: 51%; left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* ======================art-book============================= */
 .division {
   font-family: "Abhaya Libre", serif;
@@ -601,14 +612,12 @@ header .header_menu li {
 }
 .instagram .photography {
   padding-top: 116px;
-  width: 95%;
   justify-content: space-between;
-  gap: 3%;
-  margin: auto;
+  margin: 0 30px;
   padding-bottom: 147px;
 }
 .instagram .photography img {
-  width: 33.3%;
+  width: 30%;
 }
 .swiper {
   display: none;
