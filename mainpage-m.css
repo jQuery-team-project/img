@@ -21,8 +21,9 @@
     vertical-align: middle;
     align-items: center;
     justify-content: center;
-   
+
   }
+
   header .header_menu li {
     margin-right: 0;
     margin-left: 18px;
@@ -47,252 +48,365 @@
   header .header_menu .hamburger-menu {
     transform: translateY(3px);
   }
+
   /* ======================header============================= */
   .main {
     padding-top: 100px;
   }
+
   .main .main_img_wrapper {
-    width: 68%; height: 60vh;
+    width: 68%;
+    height: 60vh;
     margin-top: 0;
     padding-top: 0;
   }
+
   .mov_text {
     font-size: 25px;
   }
-  .mov_text.text1 { top: 768px; left: 0;}
-  .mov_text.text2 { top: 1100px; left: 45%;}
-  .mov_text.text3 { top: 1400px; right: 14%;}
+
+  .mov_text.text1 {
+    top: 768px;
+    left: 0;
+  }
+
+  .mov_text.text2 {
+    top: 1100px;
+    left: 45%;
+  }
+
+  .mov_text.text3 {
+    top: 1400px;
+    right: 14%;
+  }
+
   /* ======================main============================= */
   .best_collection .title {
     width: 53%;
     margin-left: 16.4%;
     padding-top: 78px;
   }
+
   .best_collection .best_collection_top .title h2 {
     font-size: 20px;
     width: 100%;
     color: #374B3F;
   }
+
   .best_collection .title img {
     width: 100%;
   }
-  .best_collection .img_container p, .best_collection .text {
+
+  .best_collection .img_container p,
+  .best_collection .text {
     font-size: 30px;
   }
+
   .best_collection .img_container img {
-    width: 71px; height: 23px;
+    width: 71px;
+    height: 23px;
   }
-   /* ======================best-collection============================= */
+
+  /* ======================best-collection============================= */
   .introduction {
     padding-top: 0;
   }
-  .introduction .intro_text_wrapper h2 { font-size: 20px; text-align: left; margin-bottom: 20px;}
-  .introduction .intro_text_wrapper p { font-size: 18px; text-align: left; width: 90%; margin: auto; padding-bottom: 75px;}
+
+  .introduction .intro_text_wrapper h2 {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .introduction .intro_text_wrapper p {
+    font-size: 18px;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 75px;
+  }
+
   .introduction .intro_text_wrapper {
     margin-top: 15px;
     display: block;
   }
+
   .introduction .phrase {
     display: none;
   }
-   /* ======================introduction============================ */
-   .horizontal_top {
+
+  /* ======================introduction============================ */
+  .horizontal_top {
     font-size: 42px;
     padding: 30px 0 50px 0;
-   }
+  }
 
-   /* ======================horizontal============================ */
-   .art_book {
+  .hsWrapper {
+    font-size: 20px;
+  }
+
+  .hs_part1,
+  .hs_part2,
+  .hs_part3 {
+    display: block;
+    position: relative;
+  }
+
+  .hs_part1 img,
+  .hs_part2>img,
+  .hs_part3 img {
+    width: 54%;
+    object-fit: cover;
+  }
+  .hsWrapper .text-wrapper {
+    width: 80%;
+    margin: auto;
+  }
+  .hsWrapper .horizontal_scroll .hs_part2 .text-wrapper img {
+    display: none;
+  }
+
+  
+  
+
+  /* ======================horizontal============================ */
+  .art_book {
     color: #fff;
     padding-bottom: 0;
-   }
-   .art_book h2 img {
+  }
+
+  .art_book h2 img {
     padding: 60px 0 35px 0;
-   }
-   .art_book .pc_menu {
+  }
+
+  .art_book .pc_menu {
     display: none;
-   }
-   .art_book .gallery_group_mobile {
+  }
+
+  .art_book .gallery_group_mobile {
     display: grid;
     grid-template-columns: 1fr;
-   }
-   .art_book .gallery_group_mobile div:not(:last-of-type) {
+  }
+
+  .art_book .gallery_group_mobile div:not(:last-of-type) {
     margin-bottom: 55px;
-   }
-   .art_book .gallery_group_mobile img {
+  }
+
+  .art_book .gallery_group_mobile img {
     width: 100%;
-   }
-   .art_book .gallery_group_mobile .gallery_section_1, .art_book .gallery_group_mobile .gallery_section_2, .art_book .gallery_group_mobile .gallery_section_3 {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_1,
+  .art_book .gallery_group_mobile .gallery_section_2,
+  .art_book .gallery_group_mobile .gallery_section_3 {
     position: relative;
-   }
-   .art_book .gallery_group_mobile .gallery_section_1 .advertisement {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_1 .advertisement {
     position: absolute;
     flex-wrap: wrap;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 51%;
     justify-content: space-between;
-   }
-   .art_book .gallery_group_mobile .gallery_section_1 .advertisement p:first-child {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_1 .advertisement p:first-child {
     font-size: 25px;
     text-transform: uppercase;
     width: 100%;
     display: block;
     margin-bottom: 10px;
-   }
-   .art_book .gallery_group_mobile .gallery_section_1 .advertisement p a {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_1 .advertisement p a {
     font-family: "Pretendard", sans-serif;
     font-size: 11px;
     text-decoration: underline 1px;
-   }
+  }
 
 
-   .art_book .gallery_group_mobile .gallery_section_2 .advertisement {
+  .art_book .gallery_group_mobile .gallery_section_2 .advertisement {
     position: absolute;
     flex-wrap: wrap;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 51%;
     justify-content: space-between;
-   }
-   .art_book .gallery_group_mobile .gallery_section_2 .advertisement p:first-child {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_2 .advertisement p:first-child {
     font-size: 25px;
     text-transform: uppercase;
     width: 100%;
     display: block;
     margin-bottom: 10px;
-   }
-   .art_book .gallery_group_mobile .gallery_section_2 .advertisement p a {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_2 .advertisement p a {
     font-family: "Pretendard", sans-serif;
     font-size: 11px;
     text-decoration: underline 1px;
-   }
+  }
 
-   .art_book .gallery_group_mobile .gallery_section_3 .advertisement {
+  .art_book .gallery_group_mobile .gallery_section_3 .advertisement {
     position: absolute;
     flex-wrap: wrap;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
     justify-content: space-between;
-   }
-   .art_book .gallery_group_mobile .gallery_section_3 .advertisement p:first-child {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_3 .advertisement p:first-child {
     font-size: 25px;
     text-transform: uppercase;
     width: 100%;
     display: block;
     margin-bottom: 10px;
-   }
-   .art_book .gallery_group_mobile .gallery_section_3 .advertisement p a {
+  }
+
+  .art_book .gallery_group_mobile .gallery_section_3 .advertisement p a {
     font-family: "Pretendard", sans-serif;
     font-size: 11px;
     text-decoration: underline 1px;
-   }
-   /* ======================artbook============================ */
-   .division {
+  }
+
+  /* ======================artbook============================ */
+  .division {
     padding-bottom: 40px;
-   }
-   .division .sentence {
+  }
+
+  .division .sentence {
     font-size: 42px;
     font-weight: bold;
     text-wrap: nowrap;
     margin-left: 40px;
-   }
-   .division .more {
+  }
+
+  .division .more {
     font-size: 20px;
   }
-  .division > .flex_wrapper:first-of-type {
+
+  .division>.flex_wrapper:first-of-type {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .division > .flex_wrapper:last-of-type {
+
+  .division>.flex_wrapper:last-of-type {
     border-top: 1px #fff solid;
     border-bottom: 1px #fff solid;
     padding: 6px 0;
   }
-  .division > .flex_wrapper:last-of-type .arrow {
+
+  .division>.flex_wrapper:last-of-type .arrow {
     display: none;
   }
-  .division > .flex_wrapper:last-of-type .arrow_mobile {
+
+  .division>.flex_wrapper:last-of-type .arrow_mobile {
     display: block;
     width: 6%;
     margin: 1% 3% 0 1%;
   }
-  .division > .flex_wrapper .img_wrapper .cloud {
+
+  .division>.flex_wrapper .img_wrapper .cloud {
     display: block;
     padding-top: 40px;
     width: 29%;
   }
-  .division > .flex_wrapper .img_wrapper {
+
+  .division>.flex_wrapper .img_wrapper {
     width: 100%;
   }
+
   /* ======================division============================ */
   .product_slide {
     font-size: 40px;
     position: relative;
   }
+
   .product_slide .section_top {
     padding: 30px 0 40px 0;
   }
+
   .product_slide .section_top .sun {
     width: 34%;
     margin: 3%;
   }
+
   .swiper {
     display: block;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 25px;
   }
+
   .swiper .swiper-pagination {
     padding-bottom: 25px;
   }
+
   .swiper-slide {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .swiper-slide img {
     display: block;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
+
   .slider-wrap {
     display: none;
   }
+
   .slider-wrap-inverse {
     display: none;
   }
-    /* ======================slider============================ */
-    .instagram {
-      font-size: 25px;
-      padding-top: 46px;
-    }  
-    .instagram p:first-child {
-      text-align: center;
-    }
-    .instagram .account {
-      font-size: 25px;
-      text-decoration: underline 2px;
-    }
-    .instagram .account span {
-      display: block;
-    }
-    .instagram .photography {
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: center;
-      gap: 66px;
-    }
-    .instagram .photography img {
-      width: 73%;
-    }
-    footer {
-      padding: 35px 0 200px 0;
-    }
-    footer address {
-      display: none;
-    }
+
+  /* ======================slider============================ */
+  .instagram {
+    font-size: 25px;
+    padding-top: 46px;
+  }
+
+  .instagram p:first-child {
+    text-align: center;
+  }
+
+  .instagram .account {
+    font-size: 25px;
+    text-decoration: underline 2px;
+  }
+
+  .instagram .account span {
+    display: block;
+  }
+
+  .instagram .photography {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 66px;
+  }
+
+  .instagram .photography img {
+    width: 73%;
+  }
+
+  footer {
+    padding: 35px 0 200px 0;
+  }
+
+  footer address {
+    display: none;
+  }
 }

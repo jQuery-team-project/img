@@ -48,11 +48,11 @@ gsap.to(".text.text1", {
     scrub: true,
     markers: true,
   },
-  x: -100,
+  x: -300,
   duration: 3,
 });
 
-gsap.to(".container2", {
+/* gsap.to(".container2", {
   scrollTrigger: {
     trigger: ".container2",
     start: "top 50%",
@@ -98,7 +98,7 @@ gsap.to(".text3", {
   },
   x: -100,
   duration: 3,
-});
+}); */
 
 // ================================================best-collection======================================
 
