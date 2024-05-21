@@ -29,82 +29,30 @@ gsap.to(".main-model", {
 
 //===============================================gallery=========================================
 
-const chars = 'ABCDEFGHKLMNOPQRSTUVWXYZ';
-function randomChar(length, lastChar) {
-  const result = [];
-  for (let i = 0; i < length; i++) {
-    result.push(chars.charAt(Math.floor(Math.random() * chars.length)))
-  }
-  result.push(lastChar);
-  return result
-}//랜덤 알파뱃 보이는 기능
 
-const timeline = gsap.timeline({ paused: true });
-const timeline1 = gsap.timeline();
-const nickname = document.getElementById('scramble');
-const button = document.getElementById('button');
+document.addEventListener("DOMContentLoaded", () => {
 
-
-const text = nickname.dataset.text.split('');
-
-const items = text.map((char, index) => {
-  const span = document.createElement('span');
-  span.style.position = 'relative'
-  span.classList.add('box');
-
-  const chars = randomChar(3, char);
-
-  chars.forEach((char, index) => {
-    const item = document.createElement('span');
-
-    item.style.opacity = '0'
-    item.innerText = char
-
-    if (index < chars.length - 1) {
-      item.style.position = 'absolute'
-    } else {
-      item.style.position = 'relative'
-      item.classList.add('last');
-    }
-    span.appendChild(item);
-  })
-
-  return nickname.appendChild(span);
-})
-
-
-items.forEach((item, index) => {
-  timeline1.to(item.children, {
-    opacity: 1,
-    stagger: {
-      each: 0.2,
-      onUpdate: function () {
-        if (this.progress() > 0.6) {
-          if (!this._targets[0].classList.contains('last')) {
-            this._targets[0].style.opacity = '0'
+  gsap.utils.toArray(".write-in-text").forEach((text) => {
+      gsap.fromTo(text, 
+          { 
+              opacity: 0, 
+              text: ""
+          }, 
+          { 
+              opacity: 1,
+              duration: 2, 
+              text: text.getAttribute("data-text"),
+              ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: text,
+                  start: "top 95%",
+                  end: "top 50%",
+                  toggleActions: "play none none reset"
+              }
           }
-        }
-      }
-    }
-  }, `index+=${index / 2}`)
-})
-
-timeline
-  .add(timeline1.timeScale(15));
-
-
-button.addEventListener('click', function () {
-  this.classList.toggle('active')
-  if (this.classList.contains('active')) {
-    timeline.play()
-  } else {
-    timeline.reverse()
-  }
-})
-
-/* $('#button').on('click', ()=>{
-  $('#button').addClass('hide');
-}) */
+      );
+  });
+});
 
 // ================================================introduction======================================
 
@@ -171,6 +119,27 @@ gsap.to(".sun", {
   },
   rotate: 360,
   duration: 3,
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".fade-in-text").forEach((text) => {
+      gsap.fromTo(text, 
+          { opacity: 0 }, 
+          { 
+              opacity: 1, 
+              duration: 2, 
+              ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: text,
+                  start: "top 80%",
+                  end: "top 50%",
+                  toggleActions: "play none none none"
+              }
+          }
+      );
+  });
 });
 
 // ========================slider================================

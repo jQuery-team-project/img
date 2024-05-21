@@ -259,6 +259,7 @@ header .header_menu li {
   text-align: left;
   width: 76%;
   color: #fff;
+  opacity: 0;
 }
 
 .introduction .phrase {
@@ -269,12 +270,11 @@ header .header_menu li {
   text-align: left;
 }
 
-.introduction #button {
+/* .introduction #button {
   width: 100px;
   height: 50px;
   background-color: #243029;
   color: #fff;
-  /* transform: translate(-100px, 800px); */
   display: block;
   margin: 10px;
 }
@@ -282,7 +282,7 @@ header .header_menu li {
 .introduction #button:hover {
   color: #243029;
   background-color: #fff;
-}
+} */
 
 /* ======================introduction============================= */
 
@@ -414,9 +414,10 @@ header .header_menu li {
 
 .hsWrapper .horizontal_scroll .hs_part3 .text-wrapper p {
   width: 100%;
-
 }
-
+.horizontal_top .fade-in-text {
+  opacity: 0;
+}
 /* ======================horizontal============================= */
 
 .art_book {

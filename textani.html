@@ -6,50 +6,59 @@
   <title>text animation</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    body { margin: 0; }
-    .container {
-      width: 100%;
-      height: 100vh;
-    }
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    overflow-x: hidden;
+}
 
-    video {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.spacer {
+    height: 100vh;
+}
 
-    .title {
-      font-weight: 900;
-      font-size: 200px;
-      line-height: 1;
-      -webkit-text-stroke: 2px #222;
-      opacity: 0.9;
-      color: transparent;
-      margin: 0;
-      background-clip: text;
-      background-image: linear-gradient(to bottom, transparent 50%, black 50%);
-      transition: ease-out 0.4s;
-      background-size: 1% 200%;
-    }
+.text-container {
+    text-align: center;
+    margin-top: 50vh;
+}
 
-    .title:hover {
-      background-position: 0 -100%;
-    }
+.color-change-text {
+    font-size: 3rem;
+    transition: color 0.5s ease;
+}
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <video src="./images/video.mp4" autoplay muted loop></video>
-    <h2 class="title">UNLIMITED.</h2>
-    <h2 class="title">POWER.</h2>
-    <h2 class="title">NOW.</h2>
-  </div>
+  <div class="spacer"></div>
+    <div class="text-container">
+        <h1 class="color-change-text">Scroll to Change My Color</h1>
+    </div>
+    <div class="spacer"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const colorChangeText = document.querySelector('.color-change-text');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const elementPosition = colorChangeText.getBoundingClientRect().top + window.scrollY;
+        const distance = scrollPosition - elementPosition;
+
+        if (distance > 0 && distance < window.innerHeight) {
+            const percentage = distance / window.innerHeight;
+            const colorValue = Math.min(255, Math.floor(percentage * 255));
+            colorChangeText.style.color = `rgb(${colorValue}, ${255 - colorValue}, 0)`;
+        } else if (distance >= window.innerHeight) {
+            colorChangeText.style.color = 'rgb(255, 0, 0)';
+        } else {
+            colorChangeText.style.color = 'rgb(255, 255, 255)';
+        }
+    });
+});
+    </script>
 
 </body>
 
