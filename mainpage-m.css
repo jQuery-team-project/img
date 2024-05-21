@@ -148,7 +148,7 @@
   .hs_part1,
   .hs_part2,
   .hs_part3 {
-    display: block;
+    /* display: block; */
     position: relative;
   }
 

@@ -14,6 +14,20 @@ gsap.to(".main-model", {
   ease: "power4.out"
 })
 // ===============================================main=========================================
+/* gsap.to(".male-model", {
+  scrollTrigger: {
+    trigger: ".male-model",
+    start: "center center",
+    // end: "1800px 50%",
+    scrub: true,
+    markers: false,
+    pin: true,
+  },
+  duration: 5,
+  // ease: "power4.out"
+}) */
+
+//===============================================gallery=========================================
 
 const chars = 'ABCDEFGHKLMNOPQRSTUVWXYZ';
 function randomChar(length, lastChar) {
@@ -102,7 +116,7 @@ gsap.to(".container1", {
     scrub: true,
     markers: true,
   },
-  x: 300,
+  x: 200,
   duration: 3,
 });
 
@@ -114,7 +128,7 @@ gsap.to(".text.text1", {
     scrub: true,
     markers: true,
   },
-  x: -300,
+  x: -150,
   duration: 3,
 });
 
@@ -151,18 +165,68 @@ ScrollTrigger.create({
 gsap.to(".sun", {
   scrollTrigger: {
     trigger: ".product_slide",
-    start: "top top",
-    end: "bottom 50%",
+    start: "top 50%",
     scrub: true,
     markers: true,
-    pin: true,
   },
-  // y: 300,
   rotate: 360,
   duration: 3,
 });
 
 // ========================slider================================
+
+gsap.to(".bg", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top 50%",
+    scrub: 1
+  },
+  scale: 10.5
+})
+gsap.to(".ballerina", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top 50%",
+    scrub: 1
+  },
+  scale: 0.8
+})
+gsap.to(".curtain-left", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top 50%",
+    scrub: 1
+  },
+  x: -500
+})
+gsap.to(".curtain-right", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top 50%",
+    scrub: 1
+  },
+  x: 500
+})
+gsap.to(".rabbit", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top 50%",
+    scrub: 1
+  },
+  scale:0.5
+})
+gsap.to(".logo_text", {
+  scrollTrigger: {
+    trigger: ".forest",
+    start: "top bottom",
+    scrub: 1
+  },
+  y: -300
+})
+ 
+// ========================forest================================
+
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
