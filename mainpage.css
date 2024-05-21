@@ -200,160 +200,51 @@ header .header_menu li {
   margin-top: 485px;
   text-align: left;
 }
+.introduction #button {
+  width: 100px; height: 50px;
+  background-color: #243029;
+  color: #fff;
+  /* transform: translate(-100px, 800px); */
+  display: block;
+  margin: 10px;
+}
+.introduction #button:hover {
+  color: #243029;
+  background-color: #fff;
+}
 /* ======================introduction============================= */
-/* .hsWrapper {
-  font-family: "Abhaya Libre", serif;
-  margin: 0;
-  overflow-x: hidden;
- 
-}
-.horizontal_scroll {
-  width: fit-content;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.hs_part1 {
-  background-color: #243029;
-  width: 100vw;
-  position: relative;
-}
-.part1_top, .part1_bottom {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-top: 215px;
-}
-.hs_part1 .part1_top h2 {
-  width: 62.3%;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: left;
-  padding-top: 173px;
-  line-height: 1.2;
-  font-size: 153px;
-  font-weight: 800;
-}
-.hs_part1 .part1_top img {
 
-  width: 30%;
-  height: 51%;
-}
-.hs_part1 p {
- 
-    color: #fff;
-    margin: 0;
-}
-.hs_part1 .part1_bottom img {
-  width: 38.5%;
-  margin-right: 6%;
-}
-.hs_part1 .part1_bottom .text-wrapper {
-  position: relative;
-  text-align: left;
-  margin-right: 80px;
-}
-.hs_part1 .part1_bottom .text-wrapper p:first-child {
-  font-size: 3vw;
-  text-transform: uppercase;
-  margin-bottom: 10%;
-}
-.hs_part1 .part1_bottom .text-wrapper p:nth-child(2) {
-  font-size: 4vw;
-}
-.hs_part1 .part1_bottom .text-wrapper p:last-child {
-  font-size: 3vw;
-}
-
-.hs_part2 {
-  background-color: #243029;
-  width: 100vw;
-
-  position: relative;
-  color: #fff;
-  text-transform: uppercase;
-  z-index: -99;
-}
-.hs_part2 > p {
-  font-size: 100px;
-  text-align: right;
-  margin-top: 65px;
-}
-.hs_part2 > img {
-  position: absolute;
-}
-.hs_part2 > img:first-of-type {
-  left: 10%; top: 20%;
-  z-index: -9;
-}
-.hs_part2 > img:last-of-type {
-  bottom: 0;
-  right: 0;
-}
-.hs_part2 .part2_bottom {
-  display: flex;
-  margin-top: 650px;
-}
-.hs_part2 .part2_bottom .text-wrapper {
-  font-size: 3vw;
-  text-align: left;
-  margin: 2%;
-}
-
-.hs_part3 {
-  background-color: #243029;
-  width: 100vw;
-  
-  position: relative;
-  color: #fff;
-  text-transform: uppercase;
-  z-index: -99;
-}
-.hs_part3 > p {
-  font-size: 130px;
-  text-align: left;
-  margin-top: 65px;
-  z-index: 9999;
-}
-.hs_part3 > img {
-  position: absolute;
-  width: 23.75%;
-  right: 0; top: 15%;
-  z-index: -9;
-}
-.hs_part3 .part3_bottom {
-  display: flex;
-  margin-top: 630px;
-}
-.hs_part3 .part3_bottom img {
-  width: 39.4%;
-}
-.hs_part3 .part3_bottom .text-wrapper {
-  font-size: 3vw;
-  text-align: left;
-  padding: 10%;
-} */
 @media all and (max-width: 1200px) and (min-width: 769px){
-  .horizontal_top {
+  .horizontal_top, .product_slide {
     font-size: 100px;
   }
   .hsWrapper {
     font-size: 42px;
   }
+  .product_slide .section_top .sun {
+    width: 40%;
+  }
 }
 @media all and (max-width: 1600px) and (min-width: 1201px){
-  .horizontal_top {
+  .horizontal_top, .product_slide {
     font-size: 140px;
   }
   .hsWrapper {
     font-size: 59px;
   }
+  .product_slide .section_top .sun {
+    width: 28%;
+  }
 }
 @media all and (min-width: 1601px){
-  .horizontal_top {
+  .horizontal_top, .product_slide {
     font-size: 153px;
   }
   .hsWrapper {
     font-size: 65px;
+  }
+  .product_slide .section_top .sun {
+    width: 30%;
   }
 }
 
@@ -551,7 +442,6 @@ header .header_menu li {
   font-family: "Abhaya Libre", serif;
   background-color: #243029;
   color: #fff;
-  font-size: 153px;
   text-transform: uppercase;
   text-align: left;
 }
@@ -564,7 +454,7 @@ header .header_menu li {
   position: absolute;
   top: 0; right: 0;
   margin: 5%;
-  width: 20%;
+  /* width: 20%; */
 }
 .slider-wrap {
   display: flex;

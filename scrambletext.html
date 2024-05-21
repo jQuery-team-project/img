@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    #nickname {
+      display: flex;
+      font-family: sans-serif;
+      font-size: 100px;
+    }
+
+    .button.active {
+      background-color: #f00;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <!-- gsap plugin -->
+  <script src="./gsap.min.js"></script>
+  <!-- textplugin -->
+  <script src="./TextPlugin.min.js"></script>
+
+</head>
+
+<body>
+  <div id="nickname" data-text="S1MPLE"></div>
+  <button id="button" class="button">click</button>
+  <script>
+    const chars = 'ABCDEFGHKLMNOPQRSTUVWXYZ';
+    function randomChar(length, lastChar) {
+      const result = [];
+      for (let i = 0; i < length; i++) {
+        result.push(chars.charAt(Math.floor(Math.random() * chars.length)))
+      }
+      result.push(lastChar);
+      return result
+    }
+
+    const timeline = gsap.timeline({ paused: true })
+    const timeline1 = gsap.timeline()
+    const nickname = document.getElementById('nickname')
+    const button = document.getElementById('button')
+
+
+    const text = nickname.dataset.text.split('')
+
+    const items = text.map((char, index) => {
+      const span = document.createElement('span')
+      span.style.position = 'relative'
+      span.classList.add('box')
+
+      const chars = randomChar(3, char)
+
+      chars.forEach((char, index) => {
+        const item = document.createElement('span')
+
+        item.style.opacity = '0'
+        item.innerText = char
+
+        if (index < chars.length - 1) {
+          item.style.position = 'absolute'
+        } else {
+          item.style.position = 'relative'
+          item.classList.add('last')
+        }
+        span.appendChild(item)
+      })
+
+      return nickname.appendChild(span)
+    })
+
+
+    items.forEach((item, index) => {
+      timeline1.to(item.children, {
+        opacity: 1,
+        stagger: {
+          each: 0.2,
+          onUpdate: function () {
+            if (this.progress() > 0.6) {
+              if (!this._targets[0].classList.contains('last')) {
+                this._targets[0].style.opacity = '0'
+              }
+            }
+          }
+        }
+      }, `index+=${index / 2}`)
+    })
+
+    timeline
+      .add(timeline1.timeScale(3))
+
+
+    button.addEventListener('click', function () {
+      this.classList.toggle('active')
+      if (this.classList.contains('active')) {
+        timeline.play()
+      } else {
+        timeline.reverse()
+      }
+    })
+  </script>
+</body>
+
+</html>
