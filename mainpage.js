@@ -240,55 +240,22 @@ gsap.fromTo(
 );
 
 // ========================gallery================================
-/* gsap.to(".bg", {
+gsap.to(".left_animation", {
+  backgroundPosition: "top 0 left -20%, top 0 right -100%, bottom 0 left 50%", // Targeting the second background image to move vertically
+  ease: "none", 
   scrollTrigger: {
-    trigger: ".forest",
-    start: "top 50%",
-    scrub: 1
+      trigger: ".forest",
+      start: "top 50%", 
+      end: "top 40%", 
+      scrub: true 
   },
-  scale: 10.5
-})
-gsap.to(".ballerina", {
-  scrollTrigger: {
-    trigger: ".forest",
-    start: "top 50%",
-    scrub: 1
-  },
-  scale: 0.8
-})
-gsap.to(".curtain-left", {
-  scrollTrigger: {
-    trigger: ".forest",
-    start: "top 50%",
-    scrub: 1
-  },
-  x: -500
-})
-gsap.to(".curtain-right", {
-  scrollTrigger: {
-    trigger: ".forest",
-    start: "top 50%",
-    scrub: 1
-  },
-  x: 500
-})
-gsap.to(".rabbit", {
-  scrollTrigger: {
-    trigger: ".forest",
-    start: "top 50%",
-    scrub: 1
-  },
-  scale:0.5
-})
-gsap.to(".logo_text", {
-  scrollTrigger: {
-    trigger: ".forest",
-    start: "top bottom",
-    scrub: 1
-  },
-  y: -300
-})
-  */
+  duration: 3,
+});
+
+
+
+
+
 // ========================forest================================
 
 
