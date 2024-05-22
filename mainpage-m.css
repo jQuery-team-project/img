@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 @media (width <=768px) {
-  header {
+  /* header {
     flex-wrap: wrap;
     padding-bottom: 0;
   }
@@ -48,8 +48,73 @@
   header .header_menu .hamburger-menu {
     transform: translateY(3px);
   }
-
+ */
+  header .header-nav {
+    height: 50px;
+  }
+  header .header-nav h1 img {
+    width: 80px;
+  }
+  header .header-nav .close {
+    display: none;
+  }
+  header .header-nav .global-menu {
+    display: flex;
+  }
+  header .header-nav .global-menu li a span {
+    display: none;
+  }
   /* ======================header============================= */
+
+  /* main-menu */
+  header .header-nav .global-menu li .search,
+  header .header-nav .global-menu li .user,
+  header .header-nav .global-menu li .menu {
+  display: block;
+}
+  .menu-container {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 9999;
+}
+  .menu-container .main-menu {
+    font-weight: 500;
+    display: none;
+  }
+   /* 메뉴 아이콘 터치 시 */
+  .menu-container .main-menu.active {
+    display: block;
+    background-color: #fff;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+  }
+  header .header-nav .global-menu.away {
+    display: none;
+  }
+
+  header .header-nav .close.nav-on {
+    display: block;
+  }
+
+  main .menu-container .main-menu li:nth-child(1) a,
+  main .menu-container .main-menu li:nth-child(6) a,
+  main .menu-container .main-menu li:nth-child(7) a {
+    font-family: 'Abhaya Libre', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  main .menu-container .main-menu li a {
+    background-color: #fff;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 16px;
+  }
+  /* ======================menu============================= */
   .main {
     padding-top: 100px;
   }
@@ -402,23 +467,20 @@
   .instagram .photography img {
     width: 73%;
   }
-
+  /*======================instagram============================ */
+  .forest {
+    height: 30vh;
+  }
   footer {
-    padding: 35px 0 200px 0;
+    padding: 35px 0;
   }
-
+  footer .sub-menu li a {
+    font-size: 12px;
+  }
   footer address {
-    display: none;
+    font-size: 10px;
+    margin: 0;
   }
-  /* ======================forest============================ */
-  /* .rabbit {
-    display: none;
-  }
-  section h2 {
-    position: absolute;
-    bottom: 0;
-  }
-  section h2>img {
-    width: 70%;
-  } */
+  
+  
 }

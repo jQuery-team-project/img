@@ -33,11 +33,34 @@
   <script src="./assets/plugin.js/ScrollTrigger.min.js"></script>
   <!-- main script -->
   <script defer src="./mainpage.js"></script>
-  <!-- <script defer src="./list2.js"></script> -->
+  <!-- header,footer script -->
+  <script defer src="./list2.js"></script>
 </head>
 
 <body>
   <header>
+    <div class="header-nav">
+      <h1>
+        <a href="#"><img src="./assets/images/logo.svg" alt="logo"></a>
+      </h1>
+      <img src="./assets/images/X.svg" alt="close" class="close">
+      <ul class="global-menu">
+        <li>
+          <a href="#"><img src="./assets/images/search.svg" alt="search" class="search"><span>search</span></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/images/user.svg" alt="user" class="user"><span>login</span></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/images/cart.svg" alt="cart" class="cart"></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/images/menu.svg" alt="menu" class="menu"></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- <header>
     <div class="header-top">
       <span>VIVIENNE WESTWOOD SPRING-SUMMER 2024</span><img src="./img/별.png" alt="별 아이콘">
     </div>
@@ -60,7 +83,18 @@
       <li><a href="#">sale</a></li>
       <li><a href="#">collections</a></li>
     </ul>
-  </header>
+  </header> -->
+  <div class="menu-container">
+    <ul class="main-menu">
+      <li><a href="#">SHOP</a></li>
+      <li><a href="#">신상품</a></li>
+      <li><a href="#">여성</a></li>
+      <li><a href="#">남성</a></li>
+      <li><a href="#">선물</a></li>
+      <li><a href="#">SALE</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+    </ul>
+  </div>
   <!-- ===========================header=============================== -->
 
   <section class="main">
@@ -154,11 +188,7 @@
 
       <div class="hs_part2">
         <img src="./assets/images/가로하자2.png" alt="사람사진">
-        <div class="text-wrapper">
-          <p>I believe that one small thing changes the world.</p>
-          <p>The same goes for the conservation movement.</p>
-          <img src="./assets/images/가로2-2.png" alt="곰사진">
-        </div>
+        <div class="background-wrapper"></div>
       </div>
 
       <div class="hs_part3">
@@ -480,7 +510,7 @@
     <div class="background-wrapper">
       <img src="./assets/images/main-background.png" alt="">
     </div>
-    <ul class="gnb_bottom">
+    <ul class="sub-menu">
       <li><a href="#">고객센터</a></li>
       <li><a href="#">배송안내</a></li>
       <li><a href="#">반품 및 교환</a></li>
@@ -491,18 +521,8 @@
       <li><a href="#">매장안내</a></li>
     </ul>
     <address>
-      <div class="first_line flex_wrapper">
-        <p>지인터내셔날(주)</p>
-        <p>서울특별시 강남구 논현로 133길 13, 2층(논현동, 권훈빌딩)</p>
-        <p>사업자 등록번호 211-88-72607</p>
-        <p>통신판매업신고번호: 제 2015-서울강남-01560호</p>
-      </div>
-      <div class="second_line flex_wrapper">
-        <p>대표: 정철하</p>
-        <p>고객센터: 1899-6407</p>
-        <p>FAX: 02-3015-6449</p>
-        <p>개인정보책임자: 정철하</p>
-      </div>
+      <p>지인터내셔날(주) ｜ 서울특별시 강남구 논현로 133길 13, 2층(논현동, 권훈빌딩) ｜ 사업자 등록번호 211-88-72607 ｜ 통신판매업신고번호: 제 2015-서울강남-01560호</p>
+      <p>대표: 정철하 ｜ 고객센터: 1899-6407 ｜ FAX: 02-3015-6449 ｜ 개인정보책임자: 정철하</p>
     </address>
   </footer>
   <script>
