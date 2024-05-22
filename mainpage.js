@@ -124,6 +124,17 @@ gsap.to(".text.text1", {
   x: -150,
   duration: 3,
 });
+gsap.to(".fixed2", {
+  scrollTrigger: {
+    trigger: ".container1",
+    start: "top 50%",
+    end: "top 60%",
+    scrub: true,
+    markers: true,
+  },
+  x: -200,
+  duration: 3,
+});
 
 
 // ================================================best-collection======================================
@@ -229,7 +240,7 @@ gsap.fromTo(
 );
 
 // ========================gallery================================
-gsap.to(".bg", {
+/* gsap.to(".bg", {
   scrollTrigger: {
     trigger: ".forest",
     start: "top 50%",
@@ -277,7 +288,7 @@ gsap.to(".logo_text", {
   },
   y: -300
 })
- 
+  */
 // ========================forest================================
 
 

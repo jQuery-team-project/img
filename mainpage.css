@@ -127,7 +127,7 @@ header .header_menu li {
   background-color: #b5b5b5;
   display: flex;
   justify-content: space-between;
-  margin-top: 267px;
+  margin-top: 100vh;
   width: 100%;
   /* height: 100vh; */
   overflow: hidden;
@@ -169,7 +169,7 @@ header .header_menu li {
   position: relative;
   text-transform: uppercase;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 500px;
 }
 
 .best_collection .best_collection_top {
@@ -214,31 +214,17 @@ header .header_menu li {
   width: 18.9%;
   padding-top: 10%;
   margin-left: 60%;
+  transition: .5s;
 }
 
 .container1 {
   margin-left: 3%;
 }
 
-/* .container2 { margin-left: 20%;}
-.container3 { margin-left: 30%;} */
 .text1 {
   margin-left: 40%;
 }
 
-/* .text2 { margin-left: 40%;}
-.text3 { margin-left: 20%;} */
-
-.best_collection .fixed3 {
-  width: 18.9%;
-  padding-top: 500px;
-  padding-bottom: 5%;
-}
-
-.best_collection .fixed4 {
-  width: 18.9%;
-  padding-top: 100px;
-}
 
 /* ======================best-collection============================= */
 .introduction {
@@ -707,8 +693,59 @@ header .header_menu li {
 
 /* ======================instagram============================= */
 .forest {
+  width: 100%;
+  height: 50vh;
+  background-color: #374B3F;
+}
+.forest .left_animation, .right_animation {
+  width: 50%; 
   position: relative;
-  /* background-color: #374B3F; */
+}
+.forest img {
+  position: absolute;
+  height: auto;
+  object-fit: cover;
+}
+.curtain-left {
+  left: 0;
+  width: 50%;
+}
+
+.curtain-right {
+  right: 0;
+  width: 50%;
+}
+.bride {
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 30%;
+}
+.sunflower {
+  width: 50%;
+  top: 0;
+  right: 0;
+}
+
+.ballerina {
+  width: 30%;
+  bottom: 0;
+}
+
+.rabbit {
+  width: 40%;
+  bottom: 0;
+  right: 0;
+  animation: rabbit 1s infinite linear 1s both;
+}
+.logo_text {
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+/* .forest {
+  position: relative;
+  background-color: #374B3F;
   width: 100%;
   height: 80vh;
   overflow: hidden;
@@ -718,7 +755,6 @@ header .header_menu li {
 }
 
 .forest > img {
-  /* width: 100%; */
   height: 100%;
   position: absolute;
   pointer-events: none;
@@ -740,18 +776,10 @@ section h2>img {
 .background {
   width: 100%;
 }
-.curtain-left {
-  left: 0;
-}
-
-.curtain-right {
-  right: 0;
-}
 
 .sunflower {
   top: 0;
   right: 0;
-  /* width: 30%; */
 }
 
 .ballerina {
@@ -760,7 +788,6 @@ section h2>img {
 }
 
 .rabbit {
-  /* width: 100%; */
   bottom: -10%;
   right: -100px;
   animation: rabbit 1s infinite linear 1s both;
@@ -779,7 +806,7 @@ section h2>img {
   0% {
     transform: translate(-10px, 2px) rotate(-15deg);
   }
-}
+} */
 
 /* ======================forest============================= */
 footer {
