@@ -5,6 +5,7 @@ body {
   margin: 0 auto;
   text-align: center;
   overflow-x: hidden;
+  background-color: #b5b5b5;
 }
 
 header {
@@ -105,18 +106,19 @@ header .header_menu li {
 }
 
 .mov_text.text1 {
-  top: 768px;
+  top: 1000px;
   left: 15%;
+  margin: 0;
 }
 
 .mov_text.text2 {
-  top: 1100px;
-  left: 50%;
+  top: 1400px;
+  left: 40%;
 }
 
 .mov_text.text3 {
-  top: 1400px;
-  right: 20%;
+  top: 1200px;
+  right: 10%;
 }
 
 /* ======================main============================= */
@@ -125,8 +127,10 @@ header .header_menu li {
   background-color: #b5b5b5;
   display: flex;
   justify-content: space-between;
-  padding-top: 267px;
+  margin-top: 267px;
   width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
 }
 
 .gallery>img {
@@ -140,7 +144,7 @@ header .header_menu li {
   transition: .5s;
 }
 
-.gallery .img_group>img {
+ .gallery .img_group>img {
   width: 100%;
   object-fit: cover;
 }
@@ -148,6 +152,14 @@ header .header_menu li {
 .gallery .img_group img:first-child {
   margin-bottom: 50px;
 }
+
+.gallery .group1 {
+  transform: translateY(100%);
+}
+.gallery .group2 {
+  transform: translateY(-100%);
+}
+
 
 /* ======================gallery============================= */
 .best_collection {
@@ -260,6 +272,7 @@ header .header_menu li {
   width: 76%;
   color: #fff;
   opacity: 0;
+  height: 300px;
 }
 
 .introduction .phrase {
@@ -443,8 +456,13 @@ header .header_menu li {
 .art_book .text11 {
   width: 29.11%;
 }
-
 .art_book .text22 {
+  opacity: 0.2;
+}
+/* .art_book .text22 path {
+  fill: #243029;
+} */
+.art_book svg {
   width: 30.68%;
 }
 
@@ -517,6 +535,7 @@ header .header_menu li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 /* ======================art-book============================= */
 .division {
@@ -712,7 +731,7 @@ header .header_menu li {
   left: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #fff, transparent);
+  background: linear-gradient(to top, #b5b5b5, transparent);
   z-index: 9999;
 }
 section h2>img {
@@ -741,9 +760,9 @@ section h2>img {
 }
 
 .rabbit {
-  /* width: 30%; */
+  /* width: 100%; */
   bottom: -10%;
-  right: -20px;
+  right: -100px;
   animation: rabbit 1s infinite linear 1s both;
 }
 
@@ -804,3 +823,5 @@ footer .gnb_bottom {
 footer .gnb_bottom li {
   margin-bottom: 15px;
 }
+
+/* ============== */

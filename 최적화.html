@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      overflow-x: hidden;
+      background-color: #b5b5b5;
+      font-family: 'Abhaya Libre', serif;
+    }
+
+    header {
+      background-color: #b5b5b5;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header .header_menu {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    header .header_menu .mobile_menu {
+      display: none;
+    }
+
+    .main {
+      background-color: #b5b5b5;
+      padding-top: 100px;
+      position: relative;
+    }
+
+    .main .background-wrapper img {
+      width: 100%;
+    }
+
+    .main .main_img_wrapper {
+      position: relative;
+      width: 40%;
+      height: 80vh;
+      margin: 220px auto 0;
+      overflow: hidden;
+      z-index: 99;
+    }
+
+    .main .main_img_wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scale(2);
+      transition: transform 1s ease-out;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .mov_text {
+      font-size: 87px;
+      text-transform: uppercase;
+      color: #fff;
+      position: absolute;
+      z-index: 999;
+    }
+
+    .gallery {
+      background-color: #b5b5b5;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 267px;
+      width: 100%;
+    }
+
+    .gallery img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .best_collection {
+      background-color: #b5b5b5;
+      text-transform: uppercase;
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .best_collection .title h2 {
+      font-size: 60px;
+      color: #374B3F;
+    }
+
+    .best_collection .text {
+      font-size: 130px;
+      transition: .5s;
+    }
+
+    .introduction {
+      background-color: #b5b5b5;
+      padding-top: 100px;
+    }
+
+    .introduction .intro_img_wrapper {
+      display: flex;
+    }
+
+    .introduction .intro_img_wrapper img {
+      width: 50%;
+    }
+
+    .introduction .intro_text_wrapper {
+      display: flex;
+      margin-top: 106px;
+    }
+
+    .introduction .intro_text_wrapper h2 {
+      font-size: 36px;
+      color: #374B3F;
+      margin-right: 45px;
+    }
+
+    .introduction .intro_text_wrapper p {
+      font-size: 55px;
+      text-align: left;
+      width: 76%;
+      color: #fff;
+      opacity: 0;
+      height: 300px;
+    }
+
+    .introduction .phrase {
+      font-size: 48px;
+      text-transform: uppercase;
+      color: #243029;
+      margin-top: 485px;
+      text-align: left;
+    }
+
+    @media all and (max-width: 1200px) and (min-width: 769px) {
+      .horizontal_top, .product_slide {
+        font-size: 100px;
+      }
+
+      .hsWrapper {
+        font-size: 42px;
+      }
+
+      .product_slide .section_top .sun {
+        width: 40%;
+      }
+    }
+
+    @media all and (max-width: 1600px) and (min-width: 1201px) {
+      .horizontal_top, .product_slide {
+        font-size: 140px;
+      }
+
+      .hsWrapper {
+        font-size: 59px;
+      }
+
+      .product_slide .section_top .sun {
+        width: 28%;
+      }
+    }
+
+    @media all and (min-width: 1601px) {
+      .horizontal_top, .product_slide {
+        font-size: 153px;
+      }
+
+      .hsWrapper {
+        font-size: 65px;
+      }
+
+      .product_slide .section_top .sun {
+        width: 30%;
+      }
+    }
+
+    .horizontal_top {
+      background-color: #243029;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      padding: 153px 0 280px 0;
+      text-align: left;
+    }
+
+    .hsWrapper {
+      margin: 0;
+      overflow-x: hidden;
+      color: #fff;
+      background-color: #243029;
+      text-transform: uppercase;
+    }
+
+    .art_book {
+      background-color: #ddd;
+      overflow: hidden;
+      padding-bottom: 90px;
+    }
+
+    .art_book .gallery_group_mobile {
+      display: none;
+    }
+
+    .flex_wrapper {
+      display: flex;
+    }
+
+    .division {
+      background-color: #ddd;
+      color: #fff;
+      padding-bottom: 185px;
+    }
+
+    .division .sentence {
+      font-size: 153px;
+    }
+
+    .division .more {
+      font-size: 90px;
+    }
+
+    .product_slide {
+      background-color: #243029;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .product_slide .section_top {
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 160px;
+    }
+
+    .product_slide .section_top .sun {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 5%;
+    }
+
+    .instagram {
+      background-color: #b5b5b5;
+      text-align: left;
+      font-size: 36px;
+      color: #374B3F;
+      text-transform: uppercase;
+      padding-top: 110px;
+    }
+
+    .instagram p:first-child {
+      padding-bottom: 80px;
+    }
+
+    .instagram .account {
+      font-size: 80px;
+      color: #243029;
+      text-decoration: underline 4px;
+    }
+
+    .instagram .photography {
+      padding-top: 116px;
+      justify-content: space-between;
+      margin: 0 30px;
+      padding-bottom: 147px;
+    }
+
+    .instagram .photography img {
+      width: 30%;
+    }
+
+    .swiper {
+      display: none;
+    }
+
+    .forest {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .forest img {
+      height: 100%;
+      position: absolute;
+      pointer-events: none;
+      object-fit: cover;
+    }
+
+    .forest::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, #b5b5b5, transparent);
+      z-index: 9999;
+    }
+
+    footer {
+      padding-top: 137px;
+      background-color: #b5b5b5;
+      position: relative;
+    }
+
+    footer address {
+      font-family: 'Pretendard', sans-serif;
+      font-size: 12px;
+      width: 100%;
+      padding-top: 530px;
+      text-align: center;
+    }
+
+    footer .gnb_bottom {
+      font-size: 14px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 60px;
+      text-align: left;
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/style/minireset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./mainpage.css">
+  <link rel="stylesheet" href="./mainpage-m.css">
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="./gsap.min.js"></script>
+  <script src="./TextPlugin.min.js"></script>
+  <script src="./assets/javascript/scroll.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <div class="header_menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="mobile_menu">
+      <button>Menu</button>
+    </div>
+  </header>
+  <main class="main">
+    <div class="background-wrapper">
+      <img src="./assets/images/background.jpg" alt="Background Image">
+    </div>
+    <div class="main_img_wrapper">
+      <img src="./assets/images/main.jpg" alt="Main Image">
+    </div>
+    <div class="mov_text">Moving Text</div>
+  </main>
+  <section class="gallery">
+    <img src="./assets/images/gallery1.jpg" alt="Gallery Image 1">
+    <img src="./assets/images/gallery2.jpg" alt="Gallery Image 2">
+    <img src="./assets/images/gallery3.jpg" alt="Gallery Image 3">
+  </section>
+  <section class="best_collection">
+    <div class="title">
+      <h2>Best Collection</h2>
+    </div>
+    <div class="text">Stunning Text</div>
+  </section>
+  <section class="introduction">
+    <div class="intro_img_wrapper">
+      <img src="./assets/images/intro1.jpg" alt="Introduction Image 1">
+      <img src="./assets/images/intro2.jpg" alt="Introduction Image 2">
+    </div>
+    <div class="intro_text_wrapper">
+      <h2>Introduction Title</h2>
+      <p>Some introductory text about the content displayed above. This can be a brief description or some relevant information.</p>
+    </div>
+    <div class="phrase">Inspiring Phrase Here</div>
+  </section>
+  <section class="horizontal_top">
+    <div class="hsWrapper">
+      Horizontal Scrolling Content
+    </div>
+  </section>
+  <section class="art_book">
+    <div class="flex_wrapper">
+      <div class="gallery_group_mobile">
+        <img src="./assets/images/artbook1.jpg" alt="Art Book Image 1">
+        <img src="./assets/images/artbook2.jpg" alt="Art Book Image 2">
+      </div>
+    </div>
+  </section>
+  <section class="division">
+    <div class="sentence">Division Sentence</div>
+    <div class="more">More Info</div>
+  </section>
+  <section class="product_slide">
+    <div class="section_top">
+      <div class="sun">
+        <img src="./assets/images/sun.jpg" alt="Sun Image">
+      </div>
+    </div>
+  </section>
+  <section class="instagram">
+    <p>Follow us on Instagram</p>
+    <p class="account">@myaccount</p>
+    <div class="photography">
+      <img src="./assets/images/insta1.jpg" alt="Instagram Photo 1">
+      <img src="./assets/images/insta2.jpg" alt="Instagram Photo 2">
+      <img src="./assets/images/insta3.jpg" alt="Instagram Photo 3">
+    </div>
+  </section>
+  <div class="forest">
+    <img src="./assets/images/forest.jpg" alt="Forest Image">
+  </div>
+  <footer>
+    <address>&copy; 2024 My Website. All rights reserved.</address>
+    <div class="gnb_bottom">
+      <nav>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

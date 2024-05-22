@@ -1,5 +1,28 @@
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
+gsap.utils.toArray('.rolled-over-txt').forEach((txt) => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: txt,
+      start: '100% 100%',
+      end: '100% 100%',
+      scrub: 1
+    }
+  }).fromTo(
+    txt,
+    {
+      y: 200,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      ease: 'none',
+      duration: 5
+    }
+  );
+});
+
 gsap.to(".main-model", {
   scale: 1,
   scrollTrigger: {
@@ -14,23 +37,47 @@ gsap.to(".main-model", {
   ease: "power4.out"
 })
 // ===============================================main=========================================
-/* gsap.to(".male-model", {
+
+gsap.to(".gallery", {
   scrollTrigger: {
-    trigger: ".male-model",
+    trigger: ".gallery",
     start: "center center",
-    // end: "1800px 50%",
+    end: "1000px 0",
     scrub: true,
-    markers: false,
+    markers: true,
     pin: true,
   },
-  duration: 5,
-  // ease: "power4.out"
-}) */
+  y: 0,
+  duration: 3,
+});
+
+
+gsap.to(".group1", {
+  scrollTrigger: {
+    trigger: ".gallery",
+    start: "center center",
+    scrub: true,
+    markers: true,
+    ease: 'none',
+  },
+  y: 0,
+  duration: 3,
+});
+
+gsap.to(".group2", {
+  scrollTrigger: {
+    trigger: ".gallery",
+    start: "center center",
+    scrub: true,
+    markers: true,
+    ease: 'none',
+  },
+  y: 0,
+  duration: 3,
+});
 
 //===============================================gallery=========================================
 
-
-document.addEventListener("DOMContentLoaded", () => {
 
   gsap.utils.toArray(".write-in-text").forEach((text) => {
       gsap.fromTo(text, 
@@ -45,14 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
               ease: "power2.inOut",
               scrollTrigger: {
                   trigger: text,
-                  start: "top 95%",
-                  end: "top 50%",
-                  toggleActions: "play none none reset"
+                  start: "top bottom",
+                  end: "top center",
               }
           }
       );
   });
-});
 
 // ================================================introduction======================================
 
@@ -143,7 +188,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ========================slider================================
+gsap.fromTo(
+  '.gallery_group1 svg',
+  {opacity: 0.2 },
+  { 
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.gallery_group1 .first',
+      start: 'bottom center',
+      toggleActions: 'play none none reverse'
+    },
+  }
+);
+gsap.fromTo(
+  '.gallery_group2 svg',
+  {opacity: 0.2 },
+  { 
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.gallery_group2 .first',
+      start: 'bottom center',
+      toggleActions: 'play none none reverse'
+    },
+  }
+);
+gsap.fromTo(
+  '.gallery_group3 svg',
+  {opacity: 0.2 },
+  { 
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.gallery_group3 .first',
+      start: 'bottom center',
+      toggleActions: 'play none none reverse'
+    },
+  }
+);
 
+// ========================gallery================================
 gsap.to(".bg", {
   scrollTrigger: {
     trigger: ".forest",
@@ -206,6 +291,8 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 // ========================swiper================================
+
+
 
 
 

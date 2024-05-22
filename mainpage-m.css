@@ -396,6 +396,7 @@
     width: 100%;
     justify-content: center;
     gap: 66px;
+    margin: 0;
   }
 
   .instagram .photography img {
@@ -409,4 +410,15 @@
   footer address {
     display: none;
   }
+  /* ======================forest============================ */
+  /* .rabbit {
+    display: none;
+  }
+  section h2 {
+    position: absolute;
+    bottom: 0;
+  }
+  section h2>img {
+    width: 70%;
+  } */
 }
